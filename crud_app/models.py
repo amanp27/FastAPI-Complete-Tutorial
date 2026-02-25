@@ -11,4 +11,4 @@ class Employee(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, index=True)
-    enail = Column(String, unique=True, index=True)
+    email = Column(String, unique=True, index=True)

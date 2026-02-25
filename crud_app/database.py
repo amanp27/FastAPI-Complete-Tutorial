@@ -24,7 +24,7 @@ engine = create_engine(
 # Helps to create new databases sessions 
 # autoflush= False: SQLAlchemy will not automatically flush changes to the DB unless you explicitly commited or refreshed the session.
 # autocommit= False: means disables automatic commit after each query, commit manually
-sessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # ------------------------------------------------------------------------
 # Base: declarative base class for defining ORM models. It provides the foundation for creating database tables and mapping them to Python classes.
