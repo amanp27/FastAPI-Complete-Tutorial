@@ -1,3 +1,5 @@
 sqlalchemy[asyncio]
 fastapi
 uvicorn
+Authlib
+passlib
