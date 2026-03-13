@@ -4,3 +4,4 @@ uvicorn
 Authlib
 passlib
 pytest
+redis[async]
