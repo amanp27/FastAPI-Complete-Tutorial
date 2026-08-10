@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from mock_ml.models import model
+# pyrefly: ignore [missing-import]
 import numpy as np
 
 app = FastAPI()

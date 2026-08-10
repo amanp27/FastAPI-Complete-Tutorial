@@ -8,6 +8,7 @@ def get_db():
     try:
         yield db  # Connect to the Route Handler
     finally:
+        # pyrefly: ignore [missing-attribute]
         db.close() # Close the connection
 
 #Endpoint (RH)

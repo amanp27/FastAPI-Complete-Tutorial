@@ -1,0 +1,5 @@
+# Ignore Jupyter notebooks and environment folder
+ignore = [
+    "**/*.ipynb",
+    ".venv/**"
+]

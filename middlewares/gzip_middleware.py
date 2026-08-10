@@ -4,6 +4,7 @@ from starlette.middleware.gzip import GZipMiddleware
 
 app = FastAPI()
 
+# pyrefly: ignore [missing-attribute]
 app.add_gzip_middleware(
     GZipMiddleware,
     minimum_size=1000  # Compress responses larger than 1000 bytes

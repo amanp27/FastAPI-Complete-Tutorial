@@ -1,4 +1,5 @@
 import pytest
+# pyrefly: ignore [missing-import]
 from app.logic import is_eligible_for_loan
 
 

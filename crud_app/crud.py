@@ -32,7 +32,9 @@ def update_employee(db: Session, emp_id: int, employee: schemas.EmployeeUpdate):
         models.Employee.id == emp_id
     ).first()
     if db_employee:
+        # pyrefly: ignore [bad-assignment]
         db_employee.name = employee.name
+        # pyrefly: ignore [bad-assignment]
         db_employee.email = employee.email
         db.commit()
         db.refresh(db_employee)

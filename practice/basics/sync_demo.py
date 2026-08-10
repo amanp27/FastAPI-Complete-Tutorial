@@ -25,6 +25,7 @@ async def run_task(name, seconds):
 
 async def main():
     start = timer()
+    # pyrefly: ignore [no-matching-overload]
     await asyncio.gather(
         run_task('Task 1', 2),
         run_task('Task 2', 1),

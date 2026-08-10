@@ -11,4 +11,5 @@ except ConnectionError:
 
 r.set('framework', "FastAPI")
 value = r.get('framework')
+# pyrefly: ignore [missing-attribute]
 print(f"Strored value for: {value.decode()}")

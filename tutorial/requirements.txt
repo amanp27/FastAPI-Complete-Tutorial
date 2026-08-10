@@ -1,0 +1,7 @@
+sqlalchemy[asyncio]
+fastapi
+uvicorn
+Authlib
+passlib
+pytest
+redis[async]

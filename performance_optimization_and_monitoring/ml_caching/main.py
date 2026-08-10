@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import redis
 import json
+# pyrefly: ignore [missing-import]
 import joblib
 import hashlib
 from pydantic import BaseModel
@@ -23,12 +24,15 @@ class IrisFlower(BaseModel):
                 self.PetalWidthCm]
     
     def cach_key(self):
+        # pyrefly: ignore [missing-argument]
         raw = json.dump(self.model_dump(), sort_keys = True)
+        # pyrefly: ignore [missing-attribute]
         return f"Predict: {hashlib.sha256(raw.encode()).hexdigest()}"
     
 
 app.post("/predict")
 async def predict(data: IrisFlower):
+    # pyrefly: ignore [missing-attribute]
     key = data.cache_key()
 
     cached_result = redis_client.get(key)

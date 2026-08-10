@@ -17,6 +17,7 @@ def make_cache_key(post_id: int):
 async def get_post(data: PostRequest):
     cache_key = make_cache_key(data.post_id)
 
+    # pyrefly: ignore [missing-attribute]
     cached_data = redis.client.get(cache_key)
 
     if cached_data:
